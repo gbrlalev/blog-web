@@ -1,0 +1,182 @@
+/* tampilan 1 web */
+:root {
+    --pink-light: #ffe6f0;
+    --pink: #ffb6d5;
+    --accent: #ff93c2;
+    --text: #4a2c36;
+    --white: #fff;
+    --radius: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--pink-light);
+    color: var(--text);
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.name {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.name span {
+    color: var(--accent);
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* home */
+.home {
+    background: linear-gradient(to right, #ffd6e8, #fff0f6), url('img/hero-food.jpg') center/cover no-repeat;
+    padding: 100px 20px;
+    text-align: center;
+    color: var(--text);
+}
+
+.home-content h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.home-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* popular posts */
+.favorites {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff0f6;
+}
+
+.favorites h2 {
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+.favorites p {
+    margin-bottom: 40px;
+    color: var(--text);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-body h3 {
+    margin-bottom: 3px;
+    color: var(--accent);
+}
+
+.card-body h4 {
+    opacity: 30%;
+    margin-bottom: 10px;
+}
+
+/* recipes */
+.recipes {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff0f6;
+}
+
+.recipes h2 {
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+.recipes p {
+    margin-bottom: 40px;
+    color: var(--text);
+}
+
+/* reviews */
+.reviews {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff0f6;
+}
+
+.reviews h2 {
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+.reviews p {
+    margin-bottom: 40px;
+    color: var(--text);
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* responsive */
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hero-content h1 {
+        font-size: 56px;
+    }
+}
