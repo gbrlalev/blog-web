@@ -171,12 +171,33 @@ footer {
     color: #777;
 }
 
-/* responsive */
+/* responsive biar postny klo screen makin kcl postny jd kebwh 3, sm fontny mengecil*/
 @media (min-width: 768px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    .hero-content h1 {
+    .home-content h1 {
         font-size: 56px;
+    }
+}
+
+/* ini biar kecilin logo di header, kecilin font menuny, jaraknya di */
+@media (max-width: 600px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .name {
+        font-size: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .name img {
+        width: 20px;
+        height: auto;
     }
 }
